@@ -1,0 +1,57 @@
+inoremap <silent> <C-a> <Esc>I
+inoremap <C-e> <End>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+inoremap <C-d> <Del>
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
+nnoremap <C-n> :action GotoNextBookmark<CR>
+nnoremap <C-p> :action GotoPreviousBookmark<CR>
+nnoremap <C-i> :action GotoPreviousError<CR>
+nnoremap <C-o> :action GotoNextError<CR>
+nnoremap <C-h> :action TypeHierarchy<CR>
+let mapleader=' '
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap <leader>v V$%
+nnoremap <leader>l :action ReformatCode<CR>
+nnoremap <leader>o :action OptimizeImports<CR>
+nnoremap <leader>w :action Unwrap<CR>
+nnoremap <leader>s :action SelectInProjectView<CR>
+nnoremap <leader>re :action RevealIn<CR>
+nnoremap <leader>p :action EditorSelectWord<CR>:action $Paste<CR>
+nnoremap <leader>b :action ToggleBookmarkWithMnemonic<CR>
+nnoremap <leader>ca viw~e
+nnoremap `. :action JumpToLastChange<CR>
+
+"add to favorites
+nnoremap <C-f> :action AddToFavoritesPopup<CR>
+"nnoremap <C-m> :action ShowBookmarks<CR>
+nnoremap <C-m> :action EditorToggleUseSoftWraps<CR>
+nnoremap <C-b> :action ToggleBookmark<CR>
+nnoremap <C-v> :action Vcs.QuickListPopupAction<CR>
+
+"idea自带的join，可以在使用vim的J命令的时候自动合并代码，由于是自动合并的代码，所以建议不要使用
+"set ideajoin
+
+"设置ideavim和idea之间的书签通用，但是通用的A-Z标签
+set ideamarks
+
+let g:EasyMotion_override_acejump = 0
+
+"let g:EasyMotion_override_acejump = 0
+
+"设置ctrl-d和ctrl-u的行数
+set scroll=5
+"不区分大小写
+set ignorecase
+"启动easymotion
+set easymotion
+"启动vim-surround插件
+set surround
+"通过插件在每次回到normal模式的时候自动切换到英文输入法
+set keep-english-in-normal
+
+"配置ideavim的insert模式下的复制和粘贴，非常好用
+set clipboard+=unnamed
+set clipboard+=ideaput
+
