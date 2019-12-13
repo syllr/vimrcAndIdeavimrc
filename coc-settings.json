@@ -1,5 +1,6 @@
 {
   "xml.java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home",
   "imselect.defaultInput": "com.apple.keylayout.ABC",
-  "imselect.defaultInsertInput": "com.apple.keylayout.ABC"
+  "imselect.defaultInsertInput": "com.apple.keylayout.ABC",
+  "imselect.enableStatusItem": false
 }
