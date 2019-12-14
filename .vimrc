@@ -1,5 +1,7 @@
 let mapleader = "\<Space>"  "设置leader键
-filetype plugin on 			"插件检查文件类型
+filetype on 				"侦测文件类型
+filetype plugin on 			"载入文件类型插件
+filetype indent on 			"开启文件类型检查，并且载入与该类型对应的缩进规则。比如，如果编辑的是.py文件，Vim 就是会找 Python 的缩进规则~/.vim/indent/python.vim
 set number 					"展示行号
 set ts=4 					"缩进大小
 set shiftwidth=4 			"缩进大小
@@ -14,7 +16,9 @@ set noswapfile              " 不生成交换文件
 set nowrapscan              " 搜索到文件两端时不重新搜索
 set nocompatible            " 关闭兼容模式
 set hidden                  " 允许在有未保存的修改时切换缓冲区
-filetype indent on          " 针对不同的文件类型采用不同的缩进格式
+set showmatch 				"光标遇到圆括号、方括号、大括号时，自动高亮对应的另一个圆括号、方括号和大括号
+set undofile 				"Vim 会在编辑时保存操作历史，用来供用户撤消更改。默认情况下，操作记录只在本次编辑时有效，一旦编辑结束、文件关闭，操作历史就消失了，而这个配置会将其保留
+set autoread 				"打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示
 "光标移动配置
 inoremap <silent> <C-a> <Esc>I
 inoremap <C-e> <End>
@@ -30,9 +34,9 @@ nnoremap <leader>p viwp
 nnoremap <leader>e :<C-u>Files<CR>
 
 "macVim特殊设置开始
-"设置macvim的字体
-set guifont=Monaco:h16
 if has("gui_running")
+	"设置macvim的字体
+	set guifont=Monaco:h14
 	:colorscheme adventurous "设置主题
 endif
 "插件配置
@@ -72,7 +76,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "格式化
-nnoremap <leader>l :call CocAction('format')<CR>
+nnoremap <silent><leader>l :call CocAction('format')<CR>
 
 "设置文件语法格式
 nnoremap <leader>o :Filetypes<CR>
