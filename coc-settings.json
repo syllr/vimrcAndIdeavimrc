@@ -2,5 +2,12 @@
   "xml.java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home",
   "imselect.defaultInput": "com.apple.keylayout.ABC",
   "imselect.defaultInsertInput": "com.apple.keylayout.ABC",
-  "imselect.enableStatusItem": false
+  "imselect.enableStatusItem": false,
+  "list.insertMappings": {
+		"<C-n>": "normal:j",
+		"<C-p>": "normal:k",
+		"<C-c>": "do:exit",
+		"<Down>": "prompt:next",
+		"<Up>": "prompt:previous"
+	}
 }
