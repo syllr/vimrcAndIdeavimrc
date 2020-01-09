@@ -9,8 +9,8 @@ set ignorecase 				"搜索不区分大小写
 set noshowmode 				"不在底部展示mode信息（因为lightline已经展示了）
 "set foldcolumn=4 			"设置foldcolum的宽度，越宽，展示的foldColumn的层级越多
 set autoread                " 当文件在外部被修改时自动更新该文件
-set nobackup                " 不生成备份文件
-set noswapfile              " 不生成交换文件
+"set nobackup                " 不生成备份文件
+"set noswapfile              " 不生成交换文件
 set nowrapscan              " 搜索到文件两端时不重新搜索
 set nocompatible            " 关闭兼容模式
 set hidden                  " 允许在有未保存的修改时切换缓冲区
