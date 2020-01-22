@@ -7,16 +7,10 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1 	"为了
 set clipboard+=unnamed 		"支持系统剪贴板
 set ignorecase 				"搜索不区分大小写
 set noshowmode 				"不在底部展示mode信息（因为lightline已经展示了）
-"set foldcolumn=4 			"设置foldcolum的宽度，越宽，展示的foldColumn的层级越多
 set autoread                " 当文件在外部被修改时自动更新该文件
-"set nobackup                " 不生成备份文件
-"set noswapfile              " 不生成交换文件
 set nowrapscan              " 搜索到文件两端时不重新搜索
 set nocompatible            " 关闭兼容模式
-set hidden                  " 允许在有未保存的修改时切换缓冲区
 set showmatch 				"光标遇到圆括号、方括号、大括号时，自动高亮对应的另一个圆括号、方括号和大括号
-"set undofile 				"Vim 会在编辑时保存操作历史，用来供用户撤消更改。默认情况下，操作记录只在本次编辑时有效，一旦编辑结束、文件关闭，操作历史就消失了，而这个配置会将其保留
-set autoread 				"打开文件监视。如果在编辑过程中文件发生外部改变（比如被别的编辑器编辑了），就会发出提示
 "光标移动配置
 inoremap <silent> <C-a> <Esc>I
 inoremap <C-e> <End>
